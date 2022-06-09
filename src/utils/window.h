@@ -6,24 +6,24 @@
 
 namespace cg::utils
 {
-	class window
-	{
-	public:
-		static int run(cg::renderer::renderer* renderer, HINSTANCE hinstance, int ncmdshow);
-		static HWND get_hwnd()
-		{
-			return hwnd;
-		}
+    class window
+    {
+    public:
+        static int run(cg::renderer::renderer* renderer, HINSTANCE hinstance, int ncmdshow);
+        static HWND get_hwnd()
+        {
+            return hwnd;
+        }
 
-		static bool pressed_w;
-		static bool pressed_s;
-		static bool pressed_a;
-		static bool pressed_d;
+        static bool pressed_w;
+        static bool pressed_s;
+        static bool pressed_a;
+        static bool pressed_d;
 
-	protected:
-		static LRESULT CALLBACK window_proc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
+    protected:
+        static LRESULT CALLBACK window_proc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam);
 
-	private:
-		static HWND hwnd;
-	};
+    private:
+        static HWND hwnd;
+    };
 }// namespace cg::utils
